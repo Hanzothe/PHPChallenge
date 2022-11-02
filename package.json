@@ -1,0 +1,20 @@
+{
+  "name": "mdb5-standard-ui-kit-free-6.0.0",
+  "version": "1.0.0",
+  "description": "MDB5\r Version: FREE 6.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.20"
+  }
+}
