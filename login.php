@@ -11,20 +11,19 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
 
     <link rel="stylesheet" href="css/mdb.min.css" />
     <link rel="stylesheet" href="main.css" />
 </head>
 
 <body>
-    <div class="container w-75 h-75 bg-light p-3 position-absolute top-50 start-50 translate-middle overflow-auto shadow-4-strong rounded-2 text-center text-justify"
-        style="display:grid; place-items:center;">
+    <div class="container w-75 h-75 bg-light p-3 position-absolute top-50 start-50 translate-middle overflow-auto shadow-4-strong rounded-2 text-center text-justify" style="display:grid; place-items:center;">
         <h1 class=" h2 pt-1 gap-1" style="position:relative;
         top:20%">Logue para ter acesso a minha mini-jornada!</h1>
-        <div class="container">
-            <form>
+        <div class="container" style="position:relative;
+        top:-10%">
+            <form method="POST">
                 <div style="display:grid;place-items:center;">
                     <div class="form-outline mb-4 " style='width: 50%;'>
                         <input type="email" id="form1Example1" class="form-control" />
@@ -37,8 +36,8 @@
                 </div>
                 <div class="row mb-4">
                     <div class="col d-flex justify-content-center col-8">
-                        <div class="form-check" >
-                            <input class="form-check-input"  type="checkbox" value="" id="form1Example3" checked />
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
                             <label class="form-check-label" for="form1Example3"> Lembre de mim! </label>
                         </div>
                     </div>
@@ -47,7 +46,7 @@
                         <a href="#!">Esqueceu a senha?</a>
                     </div>
                 </div>
-                <div  style='display:grid'>
+                <div style='display:grid'>
                     <button type="submit" class="btn btn-primary btn-block" style='width:25%; place-self: center;'>Entrar</button>
                     <a href="register.php" style="position:relative;
                     top:20%">Cadastre-se</a>
