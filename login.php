@@ -1,3 +1,9 @@
+<?php
+require_once 'src/class/users.php';
+$u = new Usuario;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,26 +32,15 @@
             <form method="POST">
                 <div style="display:grid;place-items:center;">
                     <div class="form-outline mb-4 " style='width: 50%;'>
-                        <input type="email" id="form1Example1" class="form-control" />
+                        <input type="email" id="form1Example1" name="email" class="form-control" />
                         <label class="form-label" for="form1Example1">Email</label>
                     </div>
                     <div class="form-outline mb-4 " style='width: 50%;'>
-                        <input type="password" id="form1Example2" class="form-control" />
-                        <label class="form-label" for="form1Example2">Senha</label>
+                        <input type="password" id="form1Example2" class="form-control " name='senha' />
+                        <label class=" form-label" for="form1Example2">Senha</label>
                     </div>
                 </div>
-                <div class="row mb-4">
-                    <div class="col d-flex justify-content-center col-8">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
-                            <label class="form-check-label" for="form1Example3"> Lembre de mim! </label>
-                        </div>
-                    </div>
-                    <div class="col-2" style="position:relative;
-                    left:-7%">
-                        <a href="#!">Esqueceu a senha?</a>
-                    </div>
-                </div>
+
                 <div style='display:grid'>
                     <button type="submit" class="btn btn-primary btn-block" style='width:25%; place-self: center;'>Entrar</button>
                     <a href="register.php" style="position:relative;
@@ -53,6 +48,29 @@
                 </div>
             </form>
         </div>
+        <?php
+
+        if (isset($_POST['email'])) {
+            $email = addslashes($_POST['email']);
+            $senha = addslashes($_POST['senha']);
+
+
+            if (!empty($email) && !empty($senha)) {
+                $u->conectar('registerdata', 'localhost', 'root', '');
+                if ($u->msgErro == '') {
+                    if ($u->logar($email, $senha)) {
+                        header('location: index.php');
+                    } else {
+                        echo "Email e/ou senha estão incorretos!";
+                    }
+                } else {
+                    echo "Erro: " . $u->msgErro;
+                }
+            } else {
+                echo "Preencha todos os campos!";
+            }
+        }
+        ?>
         <script type="text/javascript" src="js/mdb.min.js"></script>
         <script type="text/javascript"></script>
         <script src="app.js"></script>
