@@ -1,8 +1,1 @@
-MDB5
-Version: FREE 6.0.0
-
-Documentation:
-https://mdbootstrap.com/docs/standard/
-
-Contact:
-office@mdbootstrap.com
+Esse aplicativo é um desafio pessoal de desenvolver em dois uma aplicação simples com Banco de Dados e algumas tecnologias, dentre elas, o PHP que eu NUNCA VI NA VIDA...Até agora...
